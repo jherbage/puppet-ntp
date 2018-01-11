@@ -23,10 +23,9 @@ restrict ::1
 # prefer - select preferrable server
 # minpoll - set minimal update frequency
 # maxpoll - set maximal update frequency
-<% @ntp_servers.each | server | -%>
-server <%= server %> iburst
+<% @ntp_servers.each do |val| -%>
+servers <%= val %> iburst
 <% end -%>
-server 3.debian.pool.ntp.org iburst
 
 
 # Driftfile.

@@ -44,7 +44,6 @@
 #
 class ntp(
   Boolean $service_enable,
-  Boolean $service_status,
   String $service_ensure,
   String $package_ensure,
   Array[String] $ntp_servers,
@@ -53,8 +52,9 @@ class ntp(
   Boolean $service_hasstatus,
   Boolean $service_hasrestart,
   String $service_name,
+  String $package_name,
 ) {
   class{'::ntp::install':}
-  -> class{'::ntp:config':}
-  ~> class{'::ntp:service':}
+  -> class{'::ntp::config':}
+  ~> class{'::ntp::service':}
 }

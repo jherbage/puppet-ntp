@@ -7,7 +7,6 @@ function ntp::data() {
     'ntp::config_file_mode' => '0664',
     'ntp::service_ensure'   => 'running',
     'ntp::service_enable'   => true,
-    'ntp::service_status'   => 'running',
     'ntp::ntp_servers'          =>  ['0.centos.pool.ntp.org','1.centos.pool.ntp.org'],
     'ntp::config_name'      => 'ntp.conf',
   }
