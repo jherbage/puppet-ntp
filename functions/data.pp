@@ -12,7 +12,7 @@ function ntp::data() {
   }
   $service_name = $facts['os']['family'] ? {
     'Debian'   => 'ntp',
-    'default'  => 'ntpd'
+    default  => 'ntpd'
   }
  
   $extra_params = {
